@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .footerCol {
+        @apply space-y-4 text-sm text-gray-700 
+    }
+    .footerColHead {
+        @apply font-bold text-lg
+    }
+}

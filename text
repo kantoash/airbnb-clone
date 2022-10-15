@@ -1,0 +1,29 @@
+import Image from 'next/image'
+import React from 'react'
+import { Bars3Icon, GlobeAltIcon, MagnifyingGlassIcon, UserCircleIcon } from '@heroicons/react/24/outline'
+function Header() {
+  return (
+    <header className='sticky z-50 top-0 bg-white shadow-md mx-7 px-5 py-3 md:px-8 space-x-8 items-center justify-between flex '>
+        <div className=' max-w-[250px]'>
+        <Image src="https://links.papareact.com/qd3" width={150} height={40} objectFit="contain" className='cursor-pointer'/>
+        {/* serach */}
+        </div>
+        <div className='flex items-center text-lg font-semibold  justify-center flex-grow border-[1px] border-gray-300 rounded-3xl shadow-lg py-1 px-3'>
+            <input type="text" placeholder='Start your Search' className='py-2 px-4 placeholder:text-gray-600  cursor-pointer outline-none flex-1'/>
+            <MagnifyingGlassIcon className='h-9 p-2 bg-pink-400 text-white rounded-full'/>
+        </div>
+
+        {/* icons */}
+        <div className='flex space-x-4 justify-end items-center  text-gray-600'>
+            <p className='hidden md:inline'>Become a host</p>
+            <GlobeAltIcon className='h-6'/>
+            <div className='flex items-center space-x-2 border-2 p-2 rounded-3xl border-gray-300'>
+                <Bars3Icon className='h-6'/>
+                <UserCircleIcon className='h-6'/>
+            </div>
+        </div>
+    </header>
+  )
+}
+
+export default Header
